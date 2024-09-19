@@ -33,13 +33,18 @@ def caesar(direction_input, text_input, shift_input):
         decrypt(text_input, shift_input)
 
 
-print(logo)
-while True:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-    caesar(direction, text, shift)
-    keep_going = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
-    if keep_going == "no":
-        print("Goodbye!")
-        break
+def run():
+    print(logo)
+    while True:
+        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+        text = input("Type your message:\n").lower()
+        shift = int(input("Type the shift number:\n"))
+        caesar(direction, text, shift)
+        keep_going = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
+        if keep_going == "no":
+            print("Goodbye!")
+            break
+
+
+if __name__ == "__main__":
+    run()
